@@ -1,0 +1,962 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: adad446b7fb6dad44a49106f0089e392, type: 3}
+  m_Name: Floating Temple
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 114914721957306366}
+  - {fileID: 114134777476974566}
+  - {fileID: 114101034872704752}
+  - {fileID: 114561909282120328}
+  - {fileID: 114928728559537120}
+  - {fileID: 114550522469170518}
+  - {fileID: 114537269315836764}
+  - {fileID: 114484323173631268}
+  - {fileID: 114667083900704910}
+  - {fileID: 114990381772948876}
+  - {fileID: 114457925825701020}
+  - {fileID: 114161971381374018}
+  - {fileID: 114335261636641212}
+  - {fileID: 114554116633018960}
+  - {fileID: 114073356873768398}
+  - {fileID: 114873193903115566}
+  - {fileID: 114752817056453500}
+  - {fileID: 114523252834346100}
+  - {fileID: 114237017441865002}
+  seed: 
+  size: {x: 100, y: 50}
+--- !u!114 &114073356873768398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2c72bd55ae9587145afa21363948dea1, type: 3}
+  m_Name: Converter
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 120, y: 216}
+  ports:
+    keys:
+    - output
+    - input
+    values:
+    - _fieldName: output
+      _node: {fileID: 114073356873768398}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: a
+        node: {fileID: 114873193903115566}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 114073356873768398}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114554116633018960}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  input: {fileID: 0}
+  index: 2
+  threshold: 0
+--- !u!114 &114101034872704752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: b35ad57c9df0f034cac8028bdcd9a37c, type: 3}
+  m_Name: Math
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -136, y: -56}
+  ports:
+    keys:
+    - output
+    - a
+    - b
+    values:
+    - _fieldName: output
+      _node: {fileID: 114101034872704752}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: b
+        node: {fileID: 114928728559537120}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: a
+      _node: {fileID: 114101034872704752}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114914721957306366}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: b
+      _node: {fileID: 114101034872704752}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114134777476974566}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  a: {fileID: 0}
+  b: {fileID: 0}
+  method: 0
+  normalize: 1
+--- !u!114 &114134777476974566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 75fa7ca23b092124b89eeea41b025641, type: 3}
+  m_Name: Gradient
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: 40}
+  ports:
+    keys:
+    - output
+    values:
+    - _fieldName: output
+      _node: {fileID: 114134777476974566}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: b
+        node: {fileID: 114101034872704752}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.04516167, g: 0.04516167, b: 0.04516167, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 1, g: 1, b: 1, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 23323
+    ctime2: 42983
+    ctime3: 65535
+    ctime4: 65535
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
+  vertical: 0
+--- !u!114 &114161971381374018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2c72bd55ae9587145afa21363948dea1, type: 3}
+  m_Name: Converter
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 120, y: 344}
+  ports:
+    keys:
+    - output
+    - input
+    values:
+    - _fieldName: output
+      _node: {fileID: 114161971381374018}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: a
+        node: {fileID: 114335261636641212}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 114161971381374018}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114484323173631268}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  input: {fileID: 0}
+  index: 2
+  threshold: 0
+--- !u!114 &114237017441865002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 112a1545717bb5f45a6268318e984f31, type: 3}
+  m_Name: Invert
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: 584}
+  ports:
+    keys:
+    - output
+    - input
+    values:
+    - _fieldName: output
+      _node: {fileID: 114237017441865002}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: b
+        node: {fileID: 114523252834346100}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 114237017441865002}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114484323173631268}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  input: {fileID: 0}
+--- !u!114 &114335261636641212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 9b255948a450a994fb838485b5f82dc5, type: 3}
+  m_Name: Overlay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 376, y: 344}
+  ports:
+    keys:
+    - output
+    - a
+    - b
+    values:
+    - _fieldName: output
+      _node: {fileID: 114335261636641212}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: b
+        node: {fileID: 114873193903115566}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: a
+      _node: {fileID: 114335261636641212}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114161971381374018}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: b
+      _node: {fileID: 114335261636641212}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114667083900704910}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  a: {fileID: 0}
+  b: {fileID: 0}
+--- !u!114 &114457925825701020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 1da90826f14ab6f4b88ff6e0148e378b, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 888, y: 344}
+  ports:
+    keys:
+    - mapData
+    values:
+    - _fieldName: mapData
+      _node: {fileID: 114457925825701020}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114873193903115566}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  mapData: {fileID: 0}
+  id: Temple
+  assetName: 
+--- !u!114 &114484323173631268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: bff570775d628484589442d55e330d86, type: 3}
+  m_Name: Image
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -904, y: 424}
+  ports:
+    keys:
+    - output
+    values:
+    - _fieldName: output
+      _node: {fileID: 114484323173631268}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114161971381374018}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: 114554116633018960}
+        reroutePoints: []
+      - fieldName: input
+        node: {fileID: 114237017441865002}
+        reroutePoints: []
+      - fieldName: mask
+        node: {fileID: 114537269315836764}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  image: {fileID: 2800000, guid: bc6ad92b3cfb16a42a5fe33ae0a96cc3, type: 3}
+--- !u!114 &114523252834346100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: b35ad57c9df0f034cac8028bdcd9a37c, type: 3}
+  m_Name: Math
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -136, y: 472}
+  ports:
+    keys:
+    - output
+    - a
+    - b
+    values:
+    - _fieldName: output
+      _node: {fileID: 114523252834346100}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114667083900704910}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: a
+      _node: {fileID: 114523252834346100}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114752817056453500}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: b
+      _node: {fileID: 114523252834346100}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114237017441865002}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  a: {fileID: 0}
+  b: {fileID: 0}
+  method: 2
+  normalize: 0
+--- !u!114 &114537269315836764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 67370faea10a048478c11ee77e1c902c, type: 3}
+  m_Name: Maze
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -648, y: 424}
+  ports:
+    keys:
+    - output
+    - mask
+    values:
+    - _fieldName: output
+      _node: {fileID: 114537269315836764}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114752817056453500}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: mask
+      _node: {fileID: 114537269315836764}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114484323173631268}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  mask: {fileID: 0}
+  start: {x: 0.5, y: 0.5}
+  wallSpacing: 2
+  waviness: 0.5
+  diagonals: 0
+--- !u!114 &114550522469170518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2c72bd55ae9587145afa21363948dea1, type: 3}
+  m_Name: Converter
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 376, y: -184}
+  ports:
+    keys:
+    - output
+    - input
+    values:
+    - _fieldName: output
+      _node: {fileID: 114550522469170518}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: mapData
+        node: {fileID: 114990381772948876}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 114550522469170518}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114928728559537120}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  input: {fileID: 0}
+  index: 1
+  threshold: 0.3
+--- !u!114 &114554116633018960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 65f8a3066a464f343abb5d5607cabc89, type: 3}
+  m_Name: Dither
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -136, y: 216}
+  ports:
+    keys:
+    - output
+    - input
+    values:
+    - _fieldName: output
+      _node: {fileID: 114554116633018960}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114073356873768398}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 114554116633018960}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114484323173631268}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  input: {fileID: 0}
+  amount: 1
+  threshold: 0
+--- !u!114 &114561909282120328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 80e01761fc063414fbdfeec59d1356ef, type: 3}
+  m_Name: Fractal Noise
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -136, y: -264}
+  ports:
+    keys:
+    - noise
+    values:
+    - _fieldName: noise
+      _node: {fileID: 114561909282120328}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: a
+        node: {fileID: 114928728559537120}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  noise: {fileID: 0}
+  noiseType: 1
+  fractalType: 0
+  depth: 4
+  frequency: 0.18
+  offset: {x: 0, y: 0}
+  normalize: 1
+--- !u!114 &114667083900704910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2c72bd55ae9587145afa21363948dea1, type: 3}
+  m_Name: Converter
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 120, y: 472}
+  ports:
+    keys:
+    - output
+    - input
+    values:
+    - _fieldName: output
+      _node: {fileID: 114667083900704910}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: b
+        node: {fileID: 114335261636641212}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 114667083900704910}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114523252834346100}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  input: {fileID: 0}
+  index: 3
+  threshold: 0
+--- !u!114 &114752817056453500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 65f8a3066a464f343abb5d5607cabc89, type: 3}
+  m_Name: Dither
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: 424}
+  ports:
+    keys:
+    - output
+    - input
+    values:
+    - _fieldName: output
+      _node: {fileID: 114752817056453500}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: a
+        node: {fileID: 114523252834346100}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 114752817056453500}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114537269315836764}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  input: {fileID: 0}
+  amount: 0
+  threshold: 0
+--- !u!114 &114873193903115566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 9b255948a450a994fb838485b5f82dc5, type: 3}
+  m_Name: Overlay
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: 344}
+  ports:
+    keys:
+    - output
+    - a
+    - b
+    values:
+    - _fieldName: output
+      _node: {fileID: 114873193903115566}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: mapData
+        node: {fileID: 114457925825701020}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: a
+      _node: {fileID: 114873193903115566}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114073356873768398}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: b
+      _node: {fileID: 114873193903115566}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114335261636641212}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  a: {fileID: 0}
+  b: {fileID: 0}
+--- !u!114 &114914721957306366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 75fa7ca23b092124b89eeea41b025641, type: 3}
+  m_Name: Gradient
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: -88}
+  ports:
+    keys:
+    - output
+    values:
+    - _fieldName: output
+      _node: {fileID: 114914721957306366}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: a
+        node: {fileID: 114101034872704752}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
+    key2: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 1, g: 1, b: 1, a: 0}
+    key5: {r: 0.9650437, g: 0.9650437, b: 0.9650437, a: 0}
+    key6: {r: 0.64078236, g: 0.64078236, b: 0.64078236, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 9445
+    ctime2: 21974
+    ctime3: 29105
+    ctime4: 35659
+    ctime5: 41441
+    ctime6: 43947
+    ctime7: 59174
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 8
+    m_NumAlphaKeys: 2
+  vertical: 1
+--- !u!114 &114928728559537120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: b35ad57c9df0f034cac8028bdcd9a37c, type: 3}
+  m_Name: Math
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 120, y: -184}
+  ports:
+    keys:
+    - output
+    - a
+    - b
+    values:
+    - _fieldName: output
+      _node: {fileID: 114928728559537120}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114550522469170518}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: a
+      _node: {fileID: 114928728559537120}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: noise
+        node: {fileID: 114561909282120328}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: b
+      _node: {fileID: 114928728559537120}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114101034872704752}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  a: {fileID: 0}
+  b: {fileID: 0}
+  method: 0
+  normalize: 1
+--- !u!114 &114990381772948876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 1da90826f14ab6f4b88ff6e0148e378b, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: -184}
+  ports:
+    keys:
+    - mapData
+    values:
+    - _fieldName: mapData
+      _node: {fileID: 114990381772948876}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114550522469170518}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  mapData: {fileID: 0}
+  id: Island
+  assetName: 

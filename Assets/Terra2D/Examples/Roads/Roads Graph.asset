@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: adad446b7fb6dad44a49106f0089e392, type: 3}
+  m_Name: Roads Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 114775769497189862}
+  - {fileID: 114022225695069388}
+  - {fileID: 114238117665408168}
+  seed: o_O
+  size: {x: 11, y: 11}
+--- !u!114 &114022225695069388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2c72bd55ae9587145afa21363948dea1, type: 3}
+  m_Name: Converter
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1112, y: -696}
+  ports:
+    keys:
+    - output
+    - input
+    values:
+    - _fieldName: output
+      _node: {fileID: 114022225695069388}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: mapData
+        node: {fileID: 114238117665408168}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: input
+      _node: {fileID: 114022225695069388}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114775769497189862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  input: {fileID: 0}
+  index: 1
+  threshold: 0
+--- !u!114 &114238117665408168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 1da90826f14ab6f4b88ff6e0148e378b, type: 3}
+  m_Name: Output
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1400, y: -712}
+  ports:
+    keys:
+    - mapData
+    values:
+    - _fieldName: mapData
+      _node: {fileID: 114238117665408168}
+      _typeQualifiedName: Terra2D.MapData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: output
+        node: {fileID: 114022225695069388}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  mapData: {fileID: 0}
+  id: Roads
+  assetName: 
+--- !u!114 &114775769497189862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 67370faea10a048478c11ee77e1c902c, type: 3}
+  m_Name: Maze
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 824, y: -712}
+  ports:
+    keys:
+    - output
+    - mask
+    values:
+    - _fieldName: output
+      _node: {fileID: 114775769497189862}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: input
+        node: {fileID: 114022225695069388}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: mask
+      _node: {fileID: 114775769497189862}
+      _typeQualifiedName: Terra2D.ValueMap, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  output: {fileID: 0}
+  mask: {fileID: 0}
+  start: {x: 0.5, y: 0.5}
+  wallSpacing: 2
+  waviness: 0
+  diagonals: 0
